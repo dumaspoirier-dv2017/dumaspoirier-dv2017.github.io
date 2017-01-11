@@ -1,0 +1,65 @@
+.tooltip {
+    color: black;
+    background-color: #fff;
+    padding: .5em;
+    text-shadow: #f5f5f5 0 1px 0;
+    border-radius: 5px;
+    border: black solid 1px;
+    opacity: 1;
+    position: absolute;
+}
+
+.hidden {
+    display: none;
+}
+
+.node circle {
+    stroke: black;
+    stroke-width: 1.2px;
+}
+
+.node--hover circle {
+    stroke: darkgrey;
+    stroke-width: 1.2px;
+    cursor: hand;
+}
+
+.node {
+    cursor: default;
+}
+
+g.pathElement {
+    cursor: hand;
+}
+
+g.pathElement:hover {
+    opacity: 0.9;
+}
+
+#selectColorType {
+    position: absolute;
+}
+
+#legendPicto {
+    position: absolute;
+    border: black thin solid;
+    border-radius: 5px;
+}
+
+.pathPoly {
+    stroke: black;
+    stroke-width: 2px;
+}
+
+svg.bordered {
+    border: black solid 1.5px;
+    border-radius: 5px;
+    margin-right: 2px;
+}
+
+.link {
+  fill: none;
+  stroke: #555;
+  stroke-opacity: 0.4;
+  stroke-width: 1.5px;
+}
