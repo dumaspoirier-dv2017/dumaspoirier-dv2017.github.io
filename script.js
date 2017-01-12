@@ -232,7 +232,6 @@ var pathviewHeight = 50,
 				});
 
 			var paths = overview.searchTree(overview.root,id,[]);
-			console.log(paths)
 			if(typeof(paths) !== "undefined"){
 				overview.openPaths(paths);
 			}
