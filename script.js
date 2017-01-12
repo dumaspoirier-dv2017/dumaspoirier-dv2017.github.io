@@ -37,7 +37,7 @@ var pathviewHeight = 50,
 		searchTree: function(obj,search,path){
 
 			if(obj.data.filename === search){ //if search is found return, add the object to the path and return it
-				path.push(obj.data);
+				path.push(obj);
 				return path;
 			}
 			else if(obj.children || obj._children){ //if children are collapsed d3 object will have them instantiated as _children
@@ -79,7 +79,7 @@ var pathviewHeight = 50,
 			for(var i =0;i<paths.length;i++){
 				if(paths[i].id !== "/"){//i.e. not root
 					paths[i].found = true;
-					if(paths[i]._children){ //if children are hidden: open them, otherwise: don't do anything
+					if(paths[i]._children && i != paths.length - 1){ //if children are hidden: open them, otherwise: don't do anything
 						paths[i].children = paths[i]._children;
 		    			paths[i]._children = null;
 					}
@@ -232,6 +232,7 @@ var pathviewHeight = 50,
 				});
 
 			var paths = overview.searchTree(overview.root,id,[]);
+			console.log(paths)
 			if(typeof(paths) !== "undefined"){
 				overview.openPaths(paths);
 			}
